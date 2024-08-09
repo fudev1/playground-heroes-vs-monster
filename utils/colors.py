@@ -1,3 +1,5 @@
+# utility pour afficher les couleurs
+
 symbol = "█"
 
 color_red = "\033[91m"
@@ -14,9 +16,14 @@ color_default = "\033[0m"
 color_list = ( color_red, color_purple, color_blue1, color_blue2, color_blue3, color_green1, color_green2, color_brown, color_gray, color_yellow, color_default )
 
 
-def print_colored(variable)
+# affiche le nom de la variable
+def print_colored(variable):
+    for name, value in globals().items():
+        if id(value) == id(variable):
+            return name
 
 
+# affiche les couleurs
 def show_colors():
     for color in color_list:
         print(f"{color}{3 * symbol}", end="")
