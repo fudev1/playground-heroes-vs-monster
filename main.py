@@ -41,8 +41,8 @@ def main():
         hero.attack(troll)
         troll.attack(hero)
 
-        print(f"\n🔸vie du {hero.name} : {hero.health}")
-        print(f"🔸vie du {troll.name} : {troll.health}\n")
+        print(f"\n🔸vie du {hero.name} : [{hero.health}]")
+        print(f"🔸vie du {troll.name} : [{troll.health}]\n")
         hero.drop()
 
 
