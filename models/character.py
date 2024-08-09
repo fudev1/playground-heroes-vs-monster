@@ -22,6 +22,17 @@ class Hero(Character):
     def __init__(self, name: str, health: int):
         super().__init__(name, health)
 
+        self.default_weapon = self.weapon
+
+    def equip(self, weapon):
+        self.weapon = weapon
+        print(f"\n>>> {color_blue3}{self.name}{color_default} a équipé : {color_yellow}{self.weapon.name}{color_default}\n")
+
+    def drop(self):
+        print(f"{self.name} a lâché : {self.weapon.name}")
+        self.weapon = self.default_weapon
+
+
 
 class Enemy(Character):
     def __init__(self, name: str, health: int, weapon):

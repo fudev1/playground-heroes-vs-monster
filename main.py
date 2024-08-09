@@ -33,15 +33,19 @@ def main():
 
 
 
-    hero = Hero(name="Hero", health=100)
-    monster = Enemy(name="Monster", health=100, weapon=arc_court)
+    hero = Hero(name="🧙 Hero", health=100)
+    hero.equip(epee_mousse)
+    troll = Enemy(name="🧌  Troll", health=100, weapon=arc_court)
 
     while True:
-        hero.attack(monster)
-        monster.attack(hero)
+        hero.attack(troll)
+        troll.attack(hero)
 
         print(f"\n🔸vie du {hero.name} : {hero.health}")
-        print(f"🔸vie du {monster.name} : {monster.health}")
+        print(f"🔸vie du {troll.name} : {troll.health}\n")
+        hero.drop()
+
+
         print("\n--------------------------------------------------------------------------------")
         input("")
 
