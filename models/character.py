@@ -1,6 +1,12 @@
 from models.weapon import *
 from utils.colors import *
 
+
+"""
+Définir les classes de base pour les personnages
+Définir les méthodes de base (attack, equip, drop)
+"""
+
 class Character:
     def __init__(self, name: str, health: int):
         self.name = name
